@@ -1,0 +1,166 @@
+.login {
+    width: 90%;
+    margin: 2rem auto;
+    animation: meals-appear 1s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 1.25em;
+    width: 2.25em;
+    height: 1.25em;
+}
+
+[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background-color: gray;
+    transition: left 250ms linear;
+}
+
+[type="checkbox"]:checked {
+    background-color: #184714;
+    border-color: #184714;
+}
+
+[type="checkbox"]:checked::before {
+    background-color: white;
+    left: 1em;
+}
+
+[type="checkbox"]:disabled {
+    border-color: lightgray;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+[type="checkbox"]:disabled:before {
+    background-color: lightgray;
+}
+
+[type="checkbox"]:disabled+span {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+[type="checkbox"]:focus-visible {
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.1em) solid #184714;
+}
+
+[type="checkbox"]:enabled:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+}
+
+/* switch */
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* switch */
+
+.input {
+    margin: 1rem 3rem;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.input label,
+.input input {
+    display: block;
+}
+
+.input label {
+    font-weight: bold;
+    flex: 1;
+    color: #464646;
+    margin-bottom: 0.5rem;
+}
+
+.input input {
+    /* flex: 3;
+    font: inherit;
+    padding: 0.35rem 0.35rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 2rem; */
+    width: 500px;
+    height: 37px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 57px;
+    margin: 1rem 0;
+    background-color: rgb(233, 233, 233);
+}
+
+.email {
+    background-image: url('../../assets/gmail.png');
+    background-size: 30px;
+    background-position: 17px center;
+    background-repeat: no-repeat
+}
+
+.password {
+    background-image: url('../../assets/padlock-2.png');
+    background-size: 30px;
+    background-position: 17px center;
+    background-repeat: no-repeat
+}
+
+.buttonLocation {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    font: inherit;
+    border: 1px solid #70bfc1;
+    background: #70bfc1;
+    color: white;
+    padding: 0.75rem 3.5rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    font-size: 1.15rem;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 30rem;
+}
