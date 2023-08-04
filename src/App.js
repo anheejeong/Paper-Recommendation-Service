@@ -1,11 +1,11 @@
 import React from "react";
-import LogIn from "./components/LogIn/LogIn";
 import classes from './App.module.css';
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <React.Fragment>
-      <LogIn />
+      <Home />
     </React.Fragment>
   );
 }

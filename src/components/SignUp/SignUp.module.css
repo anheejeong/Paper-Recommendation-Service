@@ -1,4 +1,4 @@
-.login {
+.signup {
     width: 90%;
     margin: 2rem auto;
     animation: meals-appear 1s ease-out forwards;
@@ -45,6 +45,13 @@
     background-color: rgb(233, 233, 233);
 }
 
+.username {
+    background-image: url('../../assets/user.png');
+    background-size: 30px;
+    background-position: 17px center;
+    background-repeat: no-repeat
+}
+
 .email {
     background-image: url('../../assets/gmail.png');
     background-size: 30px;
@@ -52,8 +59,22 @@
     background-repeat: no-repeat
 }
 
+.phoneNum {
+    background-image: url('../../assets/telephone.png');
+    background-size: 30px;
+    background-position: 17px center;
+    background-repeat: no-repeat
+}
+
 .password {
     background-image: url('../../assets/padlock-2.png');
+    background-size: 30px;
+    background-position: 17px center;
+    background-repeat: no-repeat
+}
+
+.passwordCheck {
+    background-image: url('../../assets/password.png');
     background-size: 30px;
     background-position: 17px center;
     background-repeat: no-repeat
