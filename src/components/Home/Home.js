@@ -6,9 +6,12 @@ import SignUp from "../SignUp/SignUp";
 import LogIn from "../LogIn/LogIn";
 import { authService } from "../../inFirebase";
 import { useNavigate } from "react-router-dom";
+import AppRouter from "./Router";
 
 const Home = props => {
+    // 로그인 상태 변화 확인용
     const [init, setInit] = useState(false);
+    // 로그인 유무 확인용
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const navigate = useNavigate();
@@ -25,24 +28,10 @@ const Home = props => {
         });
     }, [])
 
-    const [onSwitch, setOnSwitch] = useState(false);
-
-    const switchChangeHandler = () => {
-        if (onSwitch)
-            setOnSwitch(false)
-        else
-            setOnSwitch(true)
-    }
-
     return (
         <React.Fragment>
-            <Switch turnSwitch={switchChangeHandler} />
-            {!onSwitch && <Card>
-                <LogIn isLoggedIn={isLoggedIn} />
-            </Card>}
-            {onSwitch && <Card>
-                <SignUp isLoggedIn={isLoggedIn} />
-            </Card>}
+            {!isLoggedIn && "Loading.."}
+            {isLoggedIn && navigate('/search')}
         </React.Fragment>
     );
 }

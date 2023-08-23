@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from './LogIn.module.css';
 
 import { authService } from "../../inFirebase";
@@ -10,6 +10,15 @@ const LogIn = props => {
     const [errormessage, setErrormessage] = useState("")
 
     const navigate = useNavigate()
+
+    useEffect(() => {
+        // 로그인 여부 확인 가능!
+        authService.onAuthStateChanged((user) => {
+            if (user) {
+                navigate('/search');
+            }
+        });
+    }, [])
 
     const onChange = (event) => {
         // event.target.name, event.target.value
@@ -31,7 +40,7 @@ const LogIn = props => {
                 await authService.signInWithEmailAndPassword(email, password)
                     .then((data) => {
                         console.log(data)
-                        navigate('/search')
+                        navigate('/')
                     })
                     .catch((err) => {
                         // show error message
