@@ -41,7 +41,7 @@ const SignUp = props => {
             let data;
             data = await authService.createUserWithEmailAndPassword(email, password);
             console.log(data);
-            navigate('/')
+            navigate('/home')
         } catch (err) { // 가입된 이메일 계정이 이미 있을때
             setError(err.message);
             alert('This account is already subscribed.')

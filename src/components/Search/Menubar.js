@@ -20,9 +20,9 @@ const Menubar = () => {
     return (
         <div className={classes.menulist}>
             <ul className={classes.top}>
-                <li><a href="/search"><img src={home} alt="HOME" /></a></li>
+                <li><a href="/"><img src={home} alt="HOME" /></a></li>
+                <li><a href="/search"><img src={search} alt="SEARCH" /></a></li>
                 <li><a href="#"><img src={bookmark} alt="BOOKMARK" /></a></li>
-                <li><a href="#"><img src={search} alt="SEARCH" /></a></li>
                 <li><a href="#"><img src={research} alt="PAPER-RECOMMENDATION" /></a></li>
                 <li><a href="#"><img src={setting} alt="SETTING" /></a></li>
             </ul>

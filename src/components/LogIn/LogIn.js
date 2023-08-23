@@ -40,7 +40,7 @@ const LogIn = props => {
                 await authService.signInWithEmailAndPassword(email, password)
                     .then((data) => {
                         console.log(data)
-                        navigate('/')
+                        navigate('/home')
                     })
                     .catch((err) => {
                         // show error message
