@@ -1,0 +1,63 @@
+.menulist {
+    width: 15vh;
+    height: 92%;
+    max-width: 40rem;
+    padding: 1rem;
+    margin: 10vh 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-top: 3.5vh;
+    margin-bottom: 3vh;
+    margin-right: 3vh;
+    animation: card-appear 1s ease-out forwards;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    overflow: auto;
+    position: fixed;
+    left: 3%;
+    top: 1vh;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.top {
+    margin-bottom: 20vh;
+}
+
+li {
+    width: 10vh;
+    height: 10vh;
+    text-align: center;
+    padding: auto;
+    padding-top: 25%;
+    margin: 0 auto;
+    padding-right: 5px;
+}
+
+img {
+    width: 4vh;
+    height: 4vh;
+}
+
+.bot li {
+    padding-left: 1.5vh;
+}
+
+li:hover {
+    background-color: #b8f2e6;
+    border-radius: 14px;
+    transition: all ease 0.5s 0s;
+}
+
+@media (max-width: 1000px) {
+    .menulist {
+        display: none;
+    }
+}

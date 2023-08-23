@@ -1,0 +1,91 @@
+.mypage {
+    height: 92%;
+    margin-left: 3vh;
+    /* background-color: #5bc0be; */
+    background-color: rgba(36, 130, 119, 0.6);
+    /* padding: 0.2vh 0.2vh; */
+    margin: 1rem;
+    /* width: 100%; */
+    padding: 1vh 3vh;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 2vh;
+    width: 20%;
+}
+
+.mypage h1 {
+    font-size: 3vh;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.title {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title img {
+    margin: 0;
+}
+
+.title button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    padding: auto 0;
+}
+
+.title button:hover {
+    cursor: pointer;
+}
+
+.pro img {
+    width: 20vh;
+    height: 20vh;
+    background-color: white;
+    border-radius: 50%;
+    padding-top: 1vh;
+    margin-top: 3vh;
+}
+
+.nickname label {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5vh;
+    font-weight: 600;
+}
+
+.info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.info label {
+    font-size: 18px;
+    margin: 0.6vh 0;
+}
+
+.edit img {
+    border-radius: 0;
+    width: 4vh;
+    height: 4vh;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    margin: 0;
+}
+
+.edit {
+    margin-top: 3vh;
+}
+
+@media (max-width: 1130px) {
+    .mypage {
+        display: none;
+    }
+}

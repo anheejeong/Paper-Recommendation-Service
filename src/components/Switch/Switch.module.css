@@ -61,14 +61,18 @@ label {
 }
 
 /* switch */
-body {
+/* body {
     display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} */
 
 fieldset {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
     border: none;
     display: flex;
     flex-direction: column;

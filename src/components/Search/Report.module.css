@@ -1,0 +1,69 @@
+.rpt h1 {
+    color: #464646;
+    font-size: 2.5vh;
+    margin-left: 3vh;
+}
+
+.report {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.report p {
+    color: white;
+}
+
+.report label {
+    color: white;
+    margin: 0 auto;
+    font-size: 3vh;
+}
+
+.report img {
+    width: 10vh;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 14px;
+    padding: 0.5rem;
+    margin-bottom: 1vh;
+}
+
+.arrow {
+    animation: meals-appear 1s ease-out forwards;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    animation: appear 1s ease-out forwards;
+}
+
+.arrow img {
+    background-color: rgba(0, 0, 0, 0);
+    width: 7vh;
+    height: 7vh;
+}
+
+.report p {
+    margin: 0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 790) {
+    .report {
+        margin-left: 5%;
+    }
+}

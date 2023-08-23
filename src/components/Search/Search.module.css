@@ -1,0 +1,152 @@
+.space {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0 5vh;
+    position: relative;
+}
+
+.dashboard {
+    margin-top: 3vh;
+    width: 63%;
+    margin-left: 0;
+    margin-right: 13vh;
+}
+
+.search {
+    animation: meals-appear 1s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.search div {
+    display: flex;
+}
+
+.looking {
+    display: flex;
+}
+
+.look {
+    color: #464646;
+    font-size: 2.5vh;
+    margin-left: 3vh;
+}
+
+.logo {
+    font-weight: bold;
+    flex: 1;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1.5px 1.5px 1.5px gray;
+}
+
+img {
+    width: 3vh;
+    height: 3vh;
+    margin: auto 0;
+    margin-left: 1vh;
+    margin-bottom: 2vh;
+}
+
+.input {
+    margin: 0rem 3rem;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.input label,
+.input input {
+    display: inline-flex;
+}
+
+.search label {
+    font-weight: bold;
+    flex: 1;
+    color: #464646;
+}
+
+.input label {
+    font-weight: bold;
+    flex: 1;
+    color: #464646;
+    margin-bottom: 0.5rem;
+    padding-right: 5vh;
+}
+
+.input label:nth-of-type(2) {
+    padding-right: 7vh;
+}
+
+.input input {
+    width: 60vh;
+    height: 37px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    border-bottom: solid #aaaaaa 1px;
+    padding-left: 57px;
+    margin: 1rem 0;
+    /* background-color: rgb(233, 233, 233); */
+    background-color: #edf6f9;
+    min-width: 100px;
+}
+
+.btnlocation {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.search button {
+    /* display: inline-block; */
+    font: inherit;
+    border: 1px solid rgba(36, 130, 119, 0.7);
+    background: rgba(36, 130, 119, 0.7);
+    color: white;
+    padding: 1vh 5vh;
+    margin-right: 3vh;
+    cursor: pointer;
+    font-size: 1.15rem;
+    border-radius: 30px;
+    width: 30%;
+    max-width: 30rem;
+    text-align: center;
+}
+
+@media (max-width: 1130px) {
+    .dashboard {
+        width: 80%;
+        margin-left: 20vh;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .dashboard {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 790px) {
+    .space {
+        margin-left: 2%;
+    }
+
+    .input input {
+        width: 200px;
+    }
+}
