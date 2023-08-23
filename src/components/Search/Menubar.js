@@ -14,7 +14,7 @@ const Menubar = () => {
     const navigate = useNavigate()
     const logoutSubmit = () => {
         authService.signOut()
-        navigate('/')
+        navigate('/login')
     }
 
     return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from './Search.module.css';
 import Menubar from "./Menubar";
 import search from '../../assets/search.png';
@@ -18,6 +18,15 @@ const Search = props => {
     const [keyword, setKeyword] = useState('')
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        // 로그인 여부 확인 가능!
+        authService.onAuthStateChanged((user) => {
+            if (!user) {
+                navigate('/login')
+            }
+        });
+    }, [])
 
     const onChange = (event) => {
         const { target: { name, value } } = event;
