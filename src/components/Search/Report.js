@@ -7,8 +7,21 @@ import see from '../../assets/see.png';
 import arrow from '../../assets/arrow.png';
 
 import classes from './Report.module.css';
+import RecentPaper from "../RecentPaper/RecentPaper";
+
+import { useNavigate } from "react-router-dom";
 
 const Report = () => {
+    const navigate = useNavigate();
+
+    const recentClickHandler = () => {
+        navigate('/recentpaper')
+    }
+
+    const likeClickHandler = () => {
+        navigate('/likepaper')
+    }
+
     return (
         <div className={classes.rpt}>
             <h1>report</h1>
@@ -16,12 +29,12 @@ const Report = () => {
                 <DashboardCard>
                     <img src={recent} alt="RECENT" />
                     <p>Recent Paper</p>
-                    <label>32</label>
+                    <label onClick={recentClickHandler}>32</label>
                 </DashboardCard>
                 <DashboardCard>
                     <img src={like} alt="LIKE" />
                     <p>Like Paper</p>
-                    <label>4</label>
+                    <label onClick={likeClickHandler}>4</label>
                 </DashboardCard>
                 <DashboardCard>
                     <img src={link} alt="LINK" />

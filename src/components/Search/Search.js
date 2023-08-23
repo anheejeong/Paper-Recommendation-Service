@@ -52,6 +52,7 @@ const Search = props => {
                 )
                     .then(res => {
                         console.log(res.data)
+                        navigate('/result')
                     })
                     .catch(err => {
                         alert('err')

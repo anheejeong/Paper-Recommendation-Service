@@ -4,8 +4,16 @@ import edit from '../../assets/edit.png';
 import bell from '../../assets/bell.png';
 import classes from './MyPage.module.css';
 
+import { useNavigate } from "react-router-dom";
+
 const MyPage = () => {
     // id(email)로 db에서 information 들고와야 함
+
+    const navigate = useNavigate();
+
+    const editClickHandler = () => {
+        navigate('/mypage')
+    }
 
     return (
         <div className={classes.mypage}>
@@ -30,7 +38,7 @@ const MyPage = () => {
                 <label>Favor Depth: 4</label>
                 <label>Own Paper: 0</label>
             </div>
-            <div className={classes.edit}>
+            <div className={classes.edit} onClick={editClickHandler}>
                 <label>Edit <img src={edit} alt="EDIT" /></label>
             </div>
         </div>
