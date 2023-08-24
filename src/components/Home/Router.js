@@ -13,7 +13,6 @@ import Result from "../Result/Result";
 import SavePaper from "../SavePaper/SavePaper";
 
 const AppRouter = ({ isLoggedIn }) => {
-
     return (
         <BrowserRouter>
             <Routes>

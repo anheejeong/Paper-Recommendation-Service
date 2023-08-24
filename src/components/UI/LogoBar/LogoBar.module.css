@@ -1,0 +1,42 @@
+.barspace {
+    display: flex;
+    width: 100vw;
+    height: 7vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(22, 75, 41);
+    position: fixed;
+    top: 0;
+    /* width: 100% */
+    left: 0;
+    right: 0;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+.info button {
+    height: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 1.5vh;
+    cursor: pointer;
+    border-left: 0.5px solid white;
+    padding: 0 2vh;
+}
+
+.logout {
+    border-right: 0.5px solid white;
+}

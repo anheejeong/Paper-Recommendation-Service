@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import classes from './SignUp.module.css';
 import { useNavigate } from "react-router-dom";
 import { authService } from "../../inFirebase";
+import axios from "axios";
 
 const SignUp = props => {
     const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('email')
+    const [email, setEmail] = useState('')
     const [phonenum, setPhonenum] = useState('')
     const [password, setPassword] = useState('')
     const [checkpassword, setCheckpassword] = useState('')
@@ -42,7 +43,14 @@ const SignUp = props => {
             data = await authService.createUserWithEmailAndPassword(email, password);
             // id => user.uid로 디비 넣어줄 것
             console.log(data);
-            navigate('/homepage')
+            await axios.post('http://localhost:3000/signup', {
+                name: username,
+                email: email,
+                id: data.uid,
+                phonenum: phonenum
+            })
+                .then(navigate('/homepage'))
+                .catch(e => console.log(e))
         } catch (err) { // 가입된 이메일 계정이 이미 있을때
             setError(err.message);
             alert('This account is already subscribed.')
