@@ -40,11 +40,16 @@ const LogIn = props => {
                 await authService.signInWithEmailAndPassword(email, password)
                     .then((data) => {
                         console.log(data)
-                        navigate('/home')
+                        authService.onAuthStateChanged((user) => {
+                            console.log(user.uid)
+                            // user.displayname은 await user.updateProfile({displayName: name})
+                        })
+                        navigate('/search')
                     })
                     .catch((err) => {
                         // show error message
                         console.log(err)
+                        alert(err.message)
                         setErrormessage(err.message)
                     })
             } catch (err) {

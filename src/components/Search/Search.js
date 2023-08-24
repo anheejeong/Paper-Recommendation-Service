@@ -24,6 +24,11 @@ const Search = props => {
         authService.onAuthStateChanged((user) => {
             if (!user) {
                 navigate('/login')
+            } else {
+                authService.onAuthStateChanged((user) => {
+                    console.log(user.uid)
+                    // user.displayname은 await user.updateProfile({displayName: name})
+                })
             }
         });
     }, [])

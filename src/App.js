@@ -30,7 +30,7 @@ function App() {
   return (
     <React.Fragment>
       {init && <AppRouter isLoggedIn={isLoggedIn} />}
-      {!init && "Loading..."}
+      {!init && <h1>Loading . . .</h1>}
     </React.Fragment>
   );
 }
