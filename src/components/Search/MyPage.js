@@ -28,6 +28,7 @@ const MyPage = () => {
                             // navigate 하면서 res.data 같이 넘겨줘야 함
                             navigate('/mypage', {
                                 state: {
+                                    uid: user.uid,
                                     name: res.data.name,
                                     birth: res.data.birth,
                                     college: res.data.college,
