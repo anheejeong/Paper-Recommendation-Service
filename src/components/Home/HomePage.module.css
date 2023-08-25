@@ -4,8 +4,23 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 10vh;
+    gap: 2vh;
+
+    animation: card-appear 0.5s ease-out forwards;
 }
+
+@keyframes card-appear {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .home h1 {
     margin: 0;
@@ -22,6 +37,11 @@
 
 .home h1:nth-child(3) {
     font-size: 12vh;
+}
+
+.home p {
+    margin-top: 1vh;
+    margin-bottom: 0;
 }
 
 .home img {
@@ -42,7 +62,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 1.2em 2.8em;
     text-decoration: none;
     text-align: center;

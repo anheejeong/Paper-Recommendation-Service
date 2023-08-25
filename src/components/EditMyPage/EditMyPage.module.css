@@ -57,10 +57,6 @@
 }
 
 .infoform input {
-    /* margin: 1vh 0; */
-}
-
-.infoform input {
     width: 500px;
     height: 37px;
     font-size: 15px;

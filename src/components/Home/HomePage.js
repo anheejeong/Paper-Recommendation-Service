@@ -29,22 +29,20 @@ const HomePage = () => {
     }
 
     return (
-        <div>
-            <div className={classes.home}>
-                <div>
-                    <h1>Paper</h1>
-                    <h1>Recommendation</h1>
-                    <h1>Service</h1>
-                    <p>우리 서비스는 논문을 추천해줘용..</p>
-                    <p>짱 멋있죵</p>
-                    {!isLoggedIn && <button onClick={loginBtnClickHandler}>LogIn</button>}
-                    {isLoggedIn && <button onClick={searchBtnClickHandler}>Search For</button>}
-                </div>
-                <div>
-                    <img src={homepageImg} alt="Homepage Img" />
-                </div>
-
+        <div className={classes.home}>
+            <div>
+                <h1>Paper</h1>
+                <h1>Recommendation</h1>
+                <h1>Service</h1>
+                <p>If you enter a keyword for what you want to study, we recommend highly relevant papers based on the keyword.</p>
+                <p>Improve data delivery accuracy by learning the direction of the paper you want to find based on the paper reading history data.</p>
+                {!isLoggedIn && <button onClick={loginBtnClickHandler}>LogIn</button>}
+                {isLoggedIn && <button onClick={searchBtnClickHandler}>Search For</button>}
             </div>
+            <div>
+                <img src={homepageImg} alt="Homepage Img" />
+            </div>
+
         </div>
     );
 }

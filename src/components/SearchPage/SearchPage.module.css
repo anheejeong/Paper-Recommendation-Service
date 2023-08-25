@@ -1,0 +1,31 @@
+.searchbar input {
+    width: 600px;
+    height: 60px;
+    border-radius: 40px;
+    font-size: 2.5vh;
+    border: 1.5px solid green;
+    padding-left: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+    position: fixed;
+    top: 100px;
+    left: 30%;
+    right: 0;
+}
+
+.searchbar button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+
+    position: fixed;
+    top: 110px;
+    left: 35%;
+    right: 0;
+}
+
+.student img {
+    margin-top: 15vh;
+    width: 35vh;
+    height: 35vh;
+}
