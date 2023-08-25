@@ -40,13 +40,19 @@ const SignUp = props => {
         // local, session, none 세 가지 중 하나 선택 가능
         try {
             let data;
-            data = await authService.createUserWithEmailAndPassword(email, password);
+            data = await authService.createUserWithEmailAndPassword(email, password)
+            // .then(userCredential => console.log(userCredential.user))
+            // data.user?
             // id => user.uid로 디비 넣어줄 것
-            console.log(data);
+
+            // console.log(data);
+            // console.log(data.user)
+            // console.log(data.user.uid)
+
             await axios.post('http://localhost:3000/signup', {
                 name: username,
                 email: email,
-                id: data.uid,
+                id: data.user.uid,
                 phonenum: phonenum
             })
                 .then(navigate('/homepage'))

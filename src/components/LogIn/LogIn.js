@@ -39,11 +39,11 @@ const LogIn = props => {
             try {
                 await authService.signInWithEmailAndPassword(email, password)
                     .then((data) => {
-                        console.log(data)
-                        authService.onAuthStateChanged((user) => {
-                            console.log(user.uid)
-                            // user.displayname은 await user.updateProfile({displayName: name})
-                        })
+                        console.log(data.user.uid)
+                        // authService.onAuthStateChanged((user) => {
+                        //     console.log(user.uid)
+                        //     // user.displayname은 await user.updateProfile({displayName: name})
+                        // })
                         navigate('/search')
                     })
                     .catch((err) => {

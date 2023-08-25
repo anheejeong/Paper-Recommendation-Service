@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classes from './Search.module.css';
 import Menubar from "./Menubar";
 import search from '../../assets/search.png';
@@ -25,10 +25,7 @@ const Search = props => {
             if (!user) {
                 navigate('/login')
             } else {
-                authService.onAuthStateChanged((user) => {
-                    console.log(user.uid)
-                    // user.displayname은 await user.updateProfile({displayName: name})
-                })
+                console.log(user.uid)
             }
         });
     }, [])
@@ -56,7 +53,9 @@ const Search = props => {
                     { withCredentials: true }
                 )
                     .then(res => {
+                        // search result data
                         console.log(res.data)
+                        // navigate 하면서 res.data 같이 넘겨줘야 함
                         navigate('/result')
                     })
                     .catch(err => {
