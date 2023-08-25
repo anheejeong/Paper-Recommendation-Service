@@ -3,40 +3,42 @@ import classes from './EditMyPage.module.css';
 import LogoBar from "../UI/LogoBar/LogoBar";
 import SearchCard from "../UI/SearchCard/SearchCard";
 import Card from "../UI/Card/Card";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { authService } from "../../inFirebase";
 import axios from "axios";
 
 const EditMyPage = () => {
-    let data;
     const navigate = useNavigate();
+    const location = useLocation();
+
+    console.log(location.state.name)
     // 디비에서 불러와서 Input placeholder로 불러올 것
-    useEffect(() => {
-        // 로그인 여부 확인 가능!
-        authService.onAuthStateChanged(async (user) => {
-            if (!user) {
-                navigate('/login')
-            } else {
-                try {
-                    await axios.get('http://localhost:8080/mypage',
-                        { params: { id: user.uid } },
-                        { withCredentials: true }
-                    )
-                        .then(res => {
-                            // search result data
-                            console.log(res.data)
-                            data = res.data;
-                            // navigate 하면서 res.data 같이 넘겨줘야 함
-                        })
-                        .catch(err => {
-                            alert('err')
-                        })
-                } catch (e) {
-                    console.log(e);
-                }
-            }
-        });
-    }, [])
+    // useEffect(() => {
+    //     // 로그인 여부 확인 가능!
+    //     authService.onAuthStateChanged(async (user) => {
+    //         if (!user) {
+    //             navigate('/login')
+    //         } else {
+    //             try {
+    //                 await axios.get('http://localhost:8080/mypage',
+    //                     { params: { id: user.uid } },
+    //                     { withCredentials: true }
+    //                 )
+    //                     .then(res => {
+    //                         // search result data
+    //                         console.log(res.data)
+    //                         data = res.data;
+    //                         // navigate 하면서 res.data 같이 넘겨줘야 함
+    //                     })
+    //                     .catch(err => {
+    //                         alert('err')
+    //                     })
+    //             } catch (e) {
+    //                 console.log(e);
+    //             }
+    //         }
+    //     });
+    // }, [])
 
     return (
         <div className={classes.space}>
@@ -50,7 +52,7 @@ const EditMyPage = () => {
                 <form className={classes.infoform} action="submit">
                     <div>
                         <label htmlFor="">Name</label>
-                        <input type="text" placeholder={data.name} />
+                        <input type="text" placeholder={location.state.name} />
                     </div>
                     <div>
                         <label htmlFor="">Birth</label>
