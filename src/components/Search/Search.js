@@ -48,7 +48,7 @@ const Search = props => {
             //axios로 키워드 넘겨줄 것
             //navigate로 결과 화면 넘어갈 것
             try {
-                await axios.get('http://localhost:3000/search',
+                await axios.get('http://localhost:8080/search',
                     { params: { conference: conference, year: year, keyword: keyword } },
                     { withCredentials: true }
                 )

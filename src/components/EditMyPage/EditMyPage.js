@@ -17,7 +17,7 @@ const EditMyPage = () => {
                 navigate('/login')
             } else {
                 try {
-                    await axios.get('http://localhost:3000/mypage',
+                    await axios.get('http://localhost:8080/mypage',
                         { params: { id: user.user.uid } },
                         { withCredentials: true }
                     )
