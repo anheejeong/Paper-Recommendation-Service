@@ -18,7 +18,7 @@ const EditMyPage = () => {
             } else {
                 try {
                     await axios.get('http://localhost:8080/mypage',
-                        { params: { id: user.user.uid } },
+                        { params: { id: user.uid } },
                         { withCredentials: true }
                     )
                         .then(res => {
