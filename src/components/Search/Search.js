@@ -52,8 +52,7 @@ const Search = props => {
             try {
                 await axios.get('http://localhost:8080/search',
                     { params: { conference: conference, year: year, keyword: keyword } },
-                    { withCredentials: true },
-                    { timeout: 5000 }
+                    { withCredentials: true }
                 )
                     .then(res => {
                         // search result data
