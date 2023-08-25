@@ -13,14 +13,14 @@ const Result = () => {
             <div>
                 <h1>Search Result</h1>
             </div>
-            <ul>
-                {location.state.form_data.map((data) => {
+            <div>
+                {location.state.form_data.map((data) => (
                     <DataShow
                         title={data.title}
                         link={data.link}
                     />
-                })}
-            </ul>
+                ))}
+            </div>
         </React.Fragment>
     )
 }
