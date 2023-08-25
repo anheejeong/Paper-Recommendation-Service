@@ -8,6 +8,7 @@ import { authService } from "../../inFirebase";
 import axios from "axios";
 
 const EditMyPage = () => {
+    let data;
     const navigate = useNavigate();
     // 디비에서 불러와서 Input placeholder로 불러올 것
     useEffect(() => {
@@ -24,6 +25,7 @@ const EditMyPage = () => {
                         .then(res => {
                             // search result data
                             console.log(res.data)
+                            data = res.data;
                             // navigate 하면서 res.data 같이 넘겨줘야 함
                         })
                         .catch(err => {
@@ -48,7 +50,7 @@ const EditMyPage = () => {
                 <form className={classes.infoform} action="submit">
                     <div>
                         <label htmlFor="">Name</label>
-                        <input type="text" />
+                        <input type="text" placeholder={data.name} />
                     </div>
                     <div>
                         <label htmlFor="">Birth</label>
