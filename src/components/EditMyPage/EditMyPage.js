@@ -44,25 +44,22 @@ const EditMyPage = () => {
         }
     }
 
-    const submitClickHandler = async () => {
+    const submitClickHandler = async (e) => {
+        e.preventDefault();
+
         try {
-            await axios.get('http://localhost:8080/editmypage',
-                {
-                    params: {
-                        id: location.state.uid,
-                        name: name,
-                        birth: birth,
-                        college: college,
-                        degree: degree,
-                        major: major,
-                        minor: minor,
-                        field: field,
-                        favor_depth: favor_depth,
-                        own_paper: own_paper
-                    }
-                },
-                { withCredentials: true }
-            )
+            await axios.post('http://localhost:8080/editmypage', {
+                id: location.state.uid,
+                name: name,
+                birth: birth,
+                college: college,
+                degree: degree,
+                major: major,
+                minor: minor,
+                field: field,
+                favor_depth: favor_depth,
+                own_paper: own_paper
+            })
                 .then(res => {
                     console.log(res.data)
                     // navigate 하면서 res.data 같이 넘겨줘야 함
@@ -98,7 +95,8 @@ const EditMyPage = () => {
             <h1>Profile Edit</h1>
             <p>당신은 할 수 있다 수정을 프로필</p>
             <Card>
-                <form className={classes.infoform} onSubmit={submitClickHandler}>
+                {/* <div className={classes.infoform} method="POST"> */}
+                <div className={classes.infoform} method="POST">
                     <div>
                         <label>Name</label>
                         <input name="name" type="text" placeholder={location.state.name} onChange={inputChangeHandler} />
@@ -136,10 +134,10 @@ const EditMyPage = () => {
                         <input name="own_paper" type="text" placeholder={location.state.own_paper} onChange={inputChangeHandler} />
                     </div>
                     <div className={classes.btn}>
-                        <button type="submit">Edit</button>
+                        <button type="submit" onClick={submitClickHandler}>Edit</button>
                         {/* 취소 버튼도 있어야 할까? */}
                     </div>
-                </form>
+                </div>
             </Card>
         </div>
     )

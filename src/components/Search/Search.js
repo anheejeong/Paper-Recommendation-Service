@@ -43,20 +43,23 @@ const Search = props => {
         }
     }
 
-    const onSubmit = async () => {
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
         if (conference && year && keyword) {
             //axios로 키워드 넘겨줄 것
             //navigate로 결과 화면 넘어갈 것
             try {
                 await axios.get('http://localhost:8080/search',
                     { params: { conference: conference, year: year, keyword: keyword } },
-                    { withCredentials: true }
+                    { withCredentials: true },
+                    { timeout: 5000 }
                 )
                     .then(res => {
                         // search result data
                         console.log(res.data)
                         // navigate 하면서 res.data 같이 넘겨줘야 함
-                        navigate('/result')
+                        navigate('/result', { state: { form_data: res.data } })
                     })
                     .catch(err => {
                         alert('err')
