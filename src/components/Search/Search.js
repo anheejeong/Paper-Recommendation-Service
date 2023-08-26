@@ -7,6 +7,7 @@ import MyPage from "./MyPage";
 import SearchCard from "../UI/SearchCard/SearchCard";
 import PaperAI from "./PaperAI";
 import PaperTrend from "./PaperTrend";
+import Loading from "../Result/Loading";
 
 import axios from "axios";
 import { authService } from "../../inFirebase";
@@ -16,6 +17,8 @@ const Search = props => {
     const [conference, setConference] = useState('')
     const [year, setYear] = useState('')
     const [keyword, setKeyword] = useState('')
+
+    const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate();
 
@@ -47,6 +50,7 @@ const Search = props => {
         e.preventDefault();
 
         if (conference && year && keyword) {
+            setLoading(true);
             //axios로 키워드 넘겨줄 것
             //navigate로 결과 화면 넘어갈 것
             try {
@@ -107,6 +111,7 @@ const Search = props => {
                                 <div className={classes.btnlocation}>
                                     <button type="submit">SEARCH</button>
                                 </div>
+                                {loading && <Loading />}
                             </form>
                         </section>
                     </SearchCard>
