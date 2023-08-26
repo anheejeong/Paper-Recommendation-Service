@@ -19,7 +19,7 @@ const Payment = () => {
                 <PaymentCard>
                     <div className={classes.cardspace}>
                         <div>
-                            <h2>Silver</h2>
+                            <h2>Bachelor</h2>
                             <p>Tree Depth 2 ✔</p>
                             <p>Reflect on papers by 2020 ✔</p>
                             <p>Save storage 10/10 ✔</p>
@@ -32,7 +32,7 @@ const Payment = () => {
                 <PaymentCard>
                     <div className={classes.cardspace}>
                         <div>
-                            <h2>Gold</h2>
+                            <h2>Master</h2>
                             <p>Tree Depth 5 ✔</p>
                             <p>Reflect on papers by 2021 ✔</p>
                             <p>Save storage 30/30 ✔</p>
@@ -47,7 +47,7 @@ const Payment = () => {
                 <PaymentCard>
                     <div className={classes.cardspace}>
                         <div>
-                            <h2>VIP</h2>
+                            <h2>ph.D</h2>
                             <p>Tree Depth 10 ✔</p>
                             <p>Reflect on papers by 2022 ✔</p>
                             <p>Save storage 100/100 ✔</p>
