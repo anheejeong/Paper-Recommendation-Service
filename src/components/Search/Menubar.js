@@ -24,7 +24,7 @@ const Menubar = () => {
                 <li><a href="/searchpage"><img src={search} alt="SEARCH" /></a></li>
                 <li><a href="/savepaper"><img src={bookmark} alt="BOOKMARK" /></a></li>
                 <li><a href="#"><img src={research} alt="PAPER-RECOMMENDATION" /></a></li>
-                <li><a href="payment"><img src={setting} alt="SETTING" /></a></li>
+                <li><a href="/payment"><img src={setting} alt="SETTING" /></a></li>
             </ul>
             <ul className={classes.bot}>
                 <li onClick={logoutSubmit}><img src={exit} alt="LOGOUT" /></li>

@@ -17,6 +17,9 @@ const Result = () => {
                         <DataShow
                             title={data.title}
                             link={data.link}
+                            score={data.score}
+                            year={data.year}
+                            person={data.person}
                         />
                     ))}
                     {/* <DataShow
