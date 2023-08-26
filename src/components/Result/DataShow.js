@@ -8,7 +8,13 @@ import Loading from "./Loading";
 const DataShow = (props) => {
     const [tree, setTree] = useState(false);
     const [loading, setLoading] = useState(false);
-    var arr = []
+
+    const [one, setOne] = useState('')
+    const [two, setTwo] = useState('')
+    const [three, setThree] = useState('')
+    const [four, setFour] = useState('')
+    const [five, setFive] = useState('')
+    const [six, setSix] = useState('')
 
     const barFillWidth = props.score * 100 + '%';
     console.log(barFillWidth)
@@ -24,8 +30,15 @@ const DataShow = (props) => {
                     // 논문 타이틀이 옴..
                     .then(res => {
                         setLoading(false);
+
+                        setOne(res.data.parent1)
+                        setTwo(res.data.parent2)
+                        setThree(res.data.child1)
+                        setFour(res.data.child2)
+                        setFive(res.data.child3)
+                        setSix(res.data.child4)
+
                         setTree(!tree)
-                        console.log(res)
                     })
                     .catch(e => console.log(e))
             } catch (err) {
@@ -61,12 +74,12 @@ const DataShow = (props) => {
             </Card>
             {loading && <Loading />}
             {tree && <Tree
-                title1="LZSS 압축 알고리즘을 적용한 PDA용 Embedded Linux 파일 시스템 설계"
-                title2="LZSS 압축 알고리즘을 적용한 PDA용 Embedded Linux 파일 시스템 설계"
-                title3="LZSS 압축 알고리즘을 적용한 PDA용 Embedded Linux 파일 시스템 설계"
-                title4="LZSS 압축 알고리즘을 적용한 PDA용 Embedded Linux 파일 시스템 설계"
-                title5="LZSS 압축 알고리즘을 적용한 PDA용 Embedded Linux 파일 시스템 설계"
-                title6="LZSS 압축 알고리즘을 적용한 PDA용 Embedded Linux 파일 시스템 설계"
+                title1={one}
+                title2={two}
+                title3={three}
+                title4={four}
+                title5={five}
+                title6={six}
             />}
         </div>
     )
