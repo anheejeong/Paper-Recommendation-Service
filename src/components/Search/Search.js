@@ -7,7 +7,7 @@ import MyPage from "./MyPage";
 import SearchCard from "../UI/SearchCard/SearchCard";
 import PaperAI from "./PaperAI";
 import PaperTrend from "./PaperTrend";
-import Loading from "../Result/Loading";
+import SearchLoading from "./SearchLoading";
 
 import axios from "axios";
 import { authService } from "../../inFirebase";
@@ -111,7 +111,7 @@ const Search = props => {
                                 <div className={classes.btnlocation}>
                                     <button type="submit">SEARCH</button>
                                 </div>
-                                {loading && <Loading />}
+                                {loading && <SearchLoading />}
                             </form>
                         </section>
                     </SearchCard>
