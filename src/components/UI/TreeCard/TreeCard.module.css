@@ -1,0 +1,25 @@
+.card {
+    width: 700px;
+    /* max-width: 40rem; */
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    animation: card-appear 1s ease-out forwards;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@keyframes card-appear {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

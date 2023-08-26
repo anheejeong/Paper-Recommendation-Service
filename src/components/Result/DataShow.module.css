@@ -1,0 +1,75 @@
+.space {
+    display: flex;
+    gap: 10vh;
+    justify-content: space-between;
+}
+
+.linkcard {
+    margin: 20px 0;
+}
+
+.linkinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-right: 2vh;
+}
+
+.info p {
+    text-align: right;
+}
+
+.linkinfo button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 2.3vh;
+    text-align: left;
+    font-weight: 500;
+    color: #191919;
+    margin-bottom: 5px;
+}
+
+.linkinfo span {
+    display: inline;
+    /* color: rgb(36, 130, 119) */
+    color: green;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.linkinfo span:focus,
+.linkinfo span:hover {
+    color: rgb(36, 130, 119);
+}
+
+.chart_bar {
+    width: 300px;
+    height: 15px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.chart_bar_inner {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #313131;
+    border-radius: 12px;
+    background-color: #c3b4f3;
+    overflow: hidden;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+}
+
+.chart_bar_fill {
+    background-color: #4826b9;
+    height: 100%;
+    transition: all 0.3s ease-out;
+}

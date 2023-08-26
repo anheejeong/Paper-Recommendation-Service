@@ -29,3 +29,17 @@
     width: 35vh;
     height: 35vh;
 }
+
+.demo {
+    position: fixed;
+    top: 180px;
+    left: 12%;
+}
+
+.long {
+    text-align: left;
+}
+
+.annotation {
+    color: gray;
+}

@@ -1,0 +1,116 @@
+.space {
+    display: flex;
+    gap: 5vh;
+}
+
+.space div {
+    width: 300px;
+    text-align: center;
+    padding-right: 25px;
+}
+
+.title h2 {
+    font-size: 33px;
+}
+
+.space p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.space p:nth-child(2) {
+    margin-top: 40px;
+}
+
+/* .space p:nth-child(4) {
+    margin-bottom: 35px;
+} */
+
+.space p:last-child {
+    margin-bottom: 35px;
+}
+
+.cardspace {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description p {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.description p:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 3vh;
+}
+
+.btn button {
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+
+    border: 1px solid red;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 42px;
+    padding: 0;
+    /* border: none; */
+    background-color: rgba(255, 255, 255, 0);
+    color: #191919;
+    /* background: rgb(255, 27, 0);
+    background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%); */
+}
+
+.dbtnnger button:hover {
+    color: #f0094a;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn button:before,
+.btn button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f0094a;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn button:hover:before,
+.btn button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}

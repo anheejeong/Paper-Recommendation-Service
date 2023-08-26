@@ -12,6 +12,9 @@ import RecentPaper from "../RecentPaper/RecentPaper";
 import Result from "../Result/Result";
 import SavePaper from "../SavePaper/SavePaper";
 import SearchPage from "../SearchPage/SearchPage";
+import Payment from "../Payment/Payment";
+
+import Loading from "../Result/Loading";
 
 const AppRouter = ({ isLoggedIn }) => {
     return (
@@ -27,6 +30,8 @@ const AppRouter = ({ isLoggedIn }) => {
                 <Route exact path="/savepaper" element={<SavePaper />} />
                 <Route exact path="/recentpaper" element={<RecentPaper />} />
                 <Route exact path="/searchpage" element={<SearchPage />} />
+                <Route exact path="/payment" element={<Payment />} />
+                <Route exact path="/loading" element={<Loading />} />
             </Routes>
         </BrowserRouter>
     )
